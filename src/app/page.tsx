@@ -1,4 +1,4 @@
-import { db } from '@/db';
+import { db } from "@/db";
 
 const Home = async () => {
   const snippets = await db.snippet.findMany();
@@ -7,10 +7,7 @@ const Home = async () => {
     return <div key={snippet.id}>{snippet.title}</div>;
   });
 
-  return <div>{renderedSnippets}</div>;
+  return <div> {renderedSnippets} </div>;
 };
 
 export default Home;
-
-
-
